@@ -34,6 +34,7 @@
         <lombok.version>1.18.22</lombok.version>
         <nacos.version>2.2.5.RELEASE</nacos.version>
         <mybatisMp.version>3.5.2</mybatisMp.version>
+        <druid.version>1.2.15</druid.version>
     </properties>
 
 <!--    引入对应的springboot版本-->
@@ -79,6 +80,12 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatisMp.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
             </dependency>
 
 

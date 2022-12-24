@@ -1,2 +1,12 @@
 server:
   port: 8011
+
+spring:
+  application:
+    name: register-server-8888 # 定义微服务名
+
+  datasource:
+    password: thinker@
+    username: root
+    url: jdbc:mysql://localhost:3306/micro_service
+    driver-class-name: com.mysql.jdbc.Driver
