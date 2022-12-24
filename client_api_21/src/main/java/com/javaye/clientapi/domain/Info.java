@@ -2,6 +2,7 @@ package com.javaye.clientapi.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler;
 
 import java.io.Serializable;
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.List;
  * @Date: 2022-12-24:21:59
  * @Describe:
  */
-@TableName("info")
+@TableName(value = "info", autoResultMap = true)
 public class Info implements Serializable {
 
     private static final long serialVersionUID = -7643450122150687678L;
@@ -21,7 +22,7 @@ public class Info implements Serializable {
     private Integer age;
     @TableField("sex")
     private String sex;
-    @TableField("hobby")
+    @TableField(value = "hobby", typeHandler = JacksonTypeHandler.class)
     private List<String> hobby;
     @TableField("conn_number")
     private String conn_number;

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @Date: 2022-12-24:22:07
  * @Describe:
  */
-@TableName("study_address")
+@TableName(value = "study_address", autoResultMap = true)
 public class StudyAddress implements Serializable {
 
     private static final long serialVersionUID = 3324657763966043220L;
