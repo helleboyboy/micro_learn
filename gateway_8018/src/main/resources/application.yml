@@ -1,2 +1,6 @@
 server:
   port: 8018
+
+spring:
+  application:
+    name: gateway-server-8018

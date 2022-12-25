@@ -1,2 +1,6 @@
 server:
   port: 8015
+
+spring:
+  application:
+    name: info-server-8015
