@@ -25,10 +25,12 @@ public class UnionServiceImpl implements UnionService {
     @Override
     public List<UnionInfoAndRegister> selectAll() {
         List<UnionInfoAndRegister> unionInfoAndRegisters = unionInfoRegisterMapper.selectList(null);
+//        可是这个就相当于 重复开发了！！！需要改善！
         List<Register> registers = registerMapper.selectList(null);
         for (UnionInfoAndRegister unionInfoAndRegister : unionInfoAndRegisters) {
             String name = unionInfoAndRegister.getName();
             for (Register register : registers) {
+//                根据name字段相等来进行组合
                 if (register.getName().equals(name)) {
                     unionInfoAndRegister.setRegister(register);
                 }

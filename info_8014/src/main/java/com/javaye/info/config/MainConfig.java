@@ -12,6 +12,10 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class MainConfig {
 
+    /**
+     *  往spring容器注入 restTemplate对象
+     * @return
+     */
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
