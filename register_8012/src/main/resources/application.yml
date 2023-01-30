@@ -4,3 +4,7 @@ server:
 spring:
   application:
     name: register-server-8012
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8016/eureka/

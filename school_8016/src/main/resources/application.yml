@@ -1,3 +1,9 @@
 spring:
   application:
     name: school-server-8016
+server:
+  port: 8016
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8016/eureka/

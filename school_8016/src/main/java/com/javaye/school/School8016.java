@@ -2,6 +2,7 @@ package com.javaye.school;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.ConfigurableApplicationContext;
 
 /**
@@ -10,6 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * @Describe:
  */
 @SpringBootApplication
+@EnableEurekaServer
 public class School8016 {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(School8016.class);
