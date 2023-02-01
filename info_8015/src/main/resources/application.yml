@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: info-server-8015
+    name: info-server
 
 
 eureka:

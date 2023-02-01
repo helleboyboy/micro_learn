@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: register-server-8811 # 定义微服务名
+    name: register-server # 定义微服务名
 
   datasource:
     password: thinker@

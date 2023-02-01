@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: register-server-8012
+    name: register-server
 eureka:
   client:
     service-url:

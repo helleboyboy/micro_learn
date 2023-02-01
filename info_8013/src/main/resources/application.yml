@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: info-server-8013
+    name: info-server
 
   datasource:
     password: thinker@

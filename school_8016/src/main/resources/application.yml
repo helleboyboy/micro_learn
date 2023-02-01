@@ -1,6 +1,6 @@
 spring:
   application:
-    name: school-server-8016
+    name: school-server
 server:
   port: 8016
 eureka:
