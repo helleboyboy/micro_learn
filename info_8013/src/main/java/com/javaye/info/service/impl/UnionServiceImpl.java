@@ -44,7 +44,8 @@ public class UnionServiceImpl implements UnionService {
 //            }
 //        }
 
-        String url = "http://localhost:8011/query/registerAll";
+//        String url = "http://localhost:8011/query/registerAll";
+        String url = "http://register-server/query/registerAll";
         Register[] forObject = restTemplate.getForObject(url, Register[].class);
         for (UnionInfoAndRegister unionInfoAndRegister : unionInfoAndRegisters) {
             String name = unionInfoAndRegister.getName();

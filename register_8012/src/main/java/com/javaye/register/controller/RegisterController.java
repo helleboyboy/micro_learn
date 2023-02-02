@@ -21,6 +21,7 @@ public class RegisterController {
 
     @GetMapping("/query/registerAll")
     public List<Register> registerAll(){
+        System.out.println("121212");
         return registerService.selectList();
     }
 }
