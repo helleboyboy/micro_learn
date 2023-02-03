@@ -27,3 +27,11 @@ eureka:
 register-server:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  # 配置新的负载均衡规则
+
+
+# 开启饥饿加载，默认为懒加载
+ribbon:
+  eager-load:
+    enabled: true # 开启
+    clients:
+      - register-server # 服务开启的列表
