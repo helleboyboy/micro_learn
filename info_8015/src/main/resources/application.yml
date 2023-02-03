@@ -11,15 +11,19 @@ spring:
     url: jdbc:mysql://localhost:3306/micro_service
     driver-class-name: com.mysql.jdbc.Driver
 
+  cloud:
+    nacos:
+      server-addr: only:8848
+
 
 mybatis-plus:
   configuration:
     map-underscore-to-camel-case: false # 数据库下划线自动转驼峰标示关闭
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8016/eureka/
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:8016/eureka/
 
 
 # 仅仅只是对register-server有效；若是注入IRule的bean，则会对所有的服务起作用！！！
