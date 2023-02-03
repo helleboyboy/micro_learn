@@ -21,3 +21,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8016/eureka
+
+
+# 仅仅只是对register-server有效；若是注入IRule的bean，则会对所有的服务起作用！！！
+register-server:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  # 配置新的负载均衡规则

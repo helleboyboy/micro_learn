@@ -25,8 +25,8 @@ public class MainConfig {
         return new RestTemplate();
     }
 
-    @Bean
-    public IRule myIRule(){
-        return new RandomRule();
-    }
+//    @Bean
+//    public IRule myIRule(){
+//        return new RandomRule();
+//    }
 }
