@@ -22,4 +22,9 @@ public class MainConfig {
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
+
+//    @Bean
+//    public IRule myIRule(){
+//        return new RandomRule();
+//    }
 }
