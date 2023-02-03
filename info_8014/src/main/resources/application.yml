@@ -14,6 +14,8 @@ spring:
   cloud:
     nacos:
       server-addr: only:8848
+      discovery:
+        cluster-name: gz
 
 
 mybatis-plus:
