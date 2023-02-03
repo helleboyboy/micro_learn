@@ -58,7 +58,7 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--nacos的管理依赖-->
+            <!--nacos的管理依赖: 主要是服务发现和服务注册的规范 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
