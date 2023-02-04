@@ -17,6 +17,7 @@ spring:
       server-addr: only:8848
       discovery:
         cluster-name: sz
+        namespace: 5ed0616b-e281-4855-89ec-6734a2421f50 # test namespace id
 
 
 mybatis-plus:
