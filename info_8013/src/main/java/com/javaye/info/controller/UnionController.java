@@ -3,6 +3,7 @@ package com.javaye.info.controller;
 import com.javaye.clientapi.domain.UnionInfoAndRegister;
 import com.javaye.info.service.UnionService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,5 +22,12 @@ public class UnionController {
     @GetMapping("/query/unionAll")
     public List<UnionInfoAndRegister> selectAll(){
         return unionService.selectAll();
+    }
+
+    @Value("${a.b}")
+    private String testConfig;
+    @GetMapping("/getConfig")
+    public String getConfig(){
+        return testConfig;
     }
 }

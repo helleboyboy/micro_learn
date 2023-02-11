@@ -3,8 +3,8 @@ server:
 
 
 spring:
-  application:
-    name: info-server
+#  application:
+#    name: info-server
 
   datasource:
     password: thinker@
@@ -12,12 +12,12 @@ spring:
     url: jdbc:mysql://localhost:3306/micro_service
     driver-class-name: com.mysql.jdbc.Driver
 
-  cloud:
-    nacos:
-      server-addr: only:8848
-      discovery:
-        cluster-name: sz
-        namespace: 5ed0616b-e281-4855-89ec-6734a2421f50 # test namespace id
+#  cloud:
+#    nacos:
+#      server-addr: only:8848
+#      discovery:
+#        cluster-name: sz
+#        namespace: 5ed0616b-e281-4855-89ec-6734a2421f50 # test namespace id
 
 
 mybatis-plus:
