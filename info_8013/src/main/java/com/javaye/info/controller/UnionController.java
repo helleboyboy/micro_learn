@@ -29,8 +29,11 @@ public class UnionController {
 
     @Value("${a.b}")
     private String testConfig;
+
+    @Value("${a.c}")
+    private String cccc;
     @GetMapping("/getConfig")
     public String getConfig(){
-        return testConfig;
+        return testConfig + "~" + cccc;
     }
 }
