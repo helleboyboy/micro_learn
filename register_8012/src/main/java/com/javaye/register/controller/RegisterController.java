@@ -2,6 +2,7 @@ package com.javaye.register.controller;
 
 import com.javaye.clientapi.domain.Register;
 import com.javaye.register.service.RegisterService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +15,7 @@ import java.util.List;
  * @Describe:
  */
 @RestController
+@Slf4j
 public class RegisterController {
 
     @Autowired
@@ -22,6 +24,7 @@ public class RegisterController {
     @GetMapping("/query/registerAll")
     public List<Register> registerAll(){
         System.out.println("121212");
+        log.info("hello 121212");
         return registerService.selectList();
     }
 }

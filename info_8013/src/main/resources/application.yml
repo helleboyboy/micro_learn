@@ -45,3 +45,14 @@ register-server:
 #      - register-server # 服务开启的列表
 a:
   b: a_b_local
+
+# 配置feign的日志级别；也可以使用@Bean来注入
+feign:
+  client:
+    config:
+      default:  # 全部服务有效，可以指定服务
+        loggerLevel: FULL  # 推荐使用None
+  httpclient:
+    enabled: true  # 开启apache httpclient的支持
+    max-connections: 100
+    max-connections-per-route: 40
