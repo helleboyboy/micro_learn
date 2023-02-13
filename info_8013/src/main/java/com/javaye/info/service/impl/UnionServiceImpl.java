@@ -2,7 +2,8 @@ package com.javaye.info.service.impl;
 
 import com.javaye.clientapi.domain.Register;
 import com.javaye.clientapi.domain.UnionInfoAndRegister;
-import com.javaye.info.feign.MyFeign;
+
+import com.javaye.clientapi.feign.MyFeign;
 import com.javaye.info.mapper.RegisterMapper;
 import com.javaye.info.mapper.UnionInfoRegisterMapper;
 import com.javaye.info.service.UnionService;
@@ -52,7 +53,8 @@ public class UnionServiceImpl implements UnionService {
 //        String url = "http://register-server/query/registerAll";
 //        Register[] forObject = restTemplate.getForObject(url, Register[].class);
 //        模拟参数
-        Register[] forObject = myFeign.feginForArray("registerAll");
+//        Register[] forObject = myFeign.feginForArray("registerAll");
+        Register[] forObject = myFeign.feginForArray_api("registerAll");
         for (UnionInfoAndRegister unionInfoAndRegister : unionInfoAndRegisters) {
             String name = unionInfoAndRegister.getName();
             for (int i = 0; i < Objects.requireNonNull(forObject).length; i++) {
