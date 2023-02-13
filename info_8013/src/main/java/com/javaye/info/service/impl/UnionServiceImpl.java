@@ -2,6 +2,7 @@ package com.javaye.info.service.impl;
 
 import com.javaye.clientapi.domain.Register;
 import com.javaye.clientapi.domain.UnionInfoAndRegister;
+import com.javaye.info.feign.MyFeign;
 import com.javaye.info.mapper.RegisterMapper;
 import com.javaye.info.mapper.UnionInfoRegisterMapper;
 import com.javaye.info.service.UnionService;
@@ -25,8 +26,11 @@ public class UnionServiceImpl implements UnionService {
     @Autowired
     RegisterMapper registerMapper;
 
+//    @Autowired
+//    RestTemplate restTemplate;
+
     @Autowired
-    RestTemplate restTemplate;
+    private MyFeign myFeign;
 
     @Override
     public List<UnionInfoAndRegister> selectAll() {
@@ -45,8 +49,9 @@ public class UnionServiceImpl implements UnionService {
 //        }
 
 //        String url = "http://localhost:8011/query/registerAll";
-        String url = "http://register-server/query/registerAll";
-        Register[] forObject = restTemplate.getForObject(url, Register[].class);
+//        String url = "http://register-server/query/registerAll";
+//        Register[] forObject = restTemplate.getForObject(url, Register[].class);
+        Register[] forObject = myFeign.feginForArray();
         for (UnionInfoAndRegister unionInfoAndRegister : unionInfoAndRegisters) {
             String name = unionInfoAndRegister.getName();
             for (int i = 0; i < Objects.requireNonNull(forObject).length; i++) {

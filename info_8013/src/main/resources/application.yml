@@ -38,10 +38,10 @@ register-server:
 
 
 # 开启饥饿加载，默认为懒加载
-ribbon:
-  eager-load:
-    enabled: true # 开启
-    clients:
-      - register-server # 服务开启的列表
+#ribbon:
+#  eager-load:
+#    enabled: true # 开启
+#    clients:
+#      - register-server # 服务开启的列表
 a:
   b: a_b_local
