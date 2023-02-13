@@ -4,6 +4,7 @@ import com.javaye.clientapi.domain.Register;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 /**
  * @Author: Java页大数据
@@ -13,6 +14,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Component
 @FeignClient(value = "register-server")  // 请求的服务名
 public interface MyFeign {
-    @GetMapping(value = "/query/registerAll")  // 请求的路径，还可以加参数
-    public Register[] feginForArray(); // 返回的类型以及参数传递
+    @GetMapping(value = "/query/{str}")  // 请求的路径，还可以加参数
+    public Register[] feginForArray(@PathVariable("str") String str); // 返回的类型以及参数传递
 }

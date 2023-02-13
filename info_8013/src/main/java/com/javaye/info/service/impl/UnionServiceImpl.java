@@ -51,7 +51,8 @@ public class UnionServiceImpl implements UnionService {
 //        String url = "http://localhost:8011/query/registerAll";
 //        String url = "http://register-server/query/registerAll";
 //        Register[] forObject = restTemplate.getForObject(url, Register[].class);
-        Register[] forObject = myFeign.feginForArray();
+//        模拟参数
+        Register[] forObject = myFeign.feginForArray("registerAll");
         for (UnionInfoAndRegister unionInfoAndRegister : unionInfoAndRegisters) {
             String name = unionInfoAndRegister.getName();
             for (int i = 0; i < Objects.requireNonNull(forObject).length; i++) {
