@@ -14,9 +14,9 @@ spring:
   cloud:
     nacos:
       server-addr: only:8848
-      discovery:
-        cluster-name: gz
-        namespace: 849871a2-611e-4d4c-b573-0bdfd779c021
+#      discovery:
+#        cluster-name: gz
+#        namespace: 849871a2-611e-4d4c-b573-0bdfd779c021
 
 
 mybatis-plus:

@@ -7,5 +7,19 @@ spring:
   cloud:
     nacos:
       server-addr: only:8848
-      discovery:
-        cluster-name: sz
+    gateway:
+      routes:
+        - id: info-server  # 路由id，唯一标识
+          uri: lb://info-server  # lb为loadBalance简写，负责负载均衡
+          predicates:  # 断言，表达式
+            - Path=/query/**  # 路径以query开头的url
+#        - id: register-server
+#          uri: lb://register-server
+#          predicates:
+#            - Path=/query/**
+#        - id: school-server
+#          uri: lb://school-server
+#          predicates:
+#            - Path=/**
+#      discovery:
+#        cluster-name: sz

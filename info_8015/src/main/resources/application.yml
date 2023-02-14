@@ -14,10 +14,10 @@ spring:
   cloud:
     nacos:
       server-addr: only:8848
-      discovery:
-        cluster-name: javaye
-        namespace: ac004ccd-778b-4363-8657-53254d24fcaa # nacos的namespace id
-        ephemeral: false
+#      discovery:
+#        cluster-name: javaye
+#        namespace: ac004ccd-778b-4363-8657-53254d24fcaa # nacos的namespace id
+#        ephemeral: false  # 非临时服务
 
 
 mybatis-plus:

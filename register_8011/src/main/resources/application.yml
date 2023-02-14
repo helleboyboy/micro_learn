@@ -13,8 +13,8 @@ spring:
   cloud:
     nacos:
       server-addr: only:8848
-      discovery:
-        cluster-name: sz
+#      discovery:
+#        cluster-name: sz
 
 
 #eureka:
