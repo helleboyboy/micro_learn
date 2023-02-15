@@ -14,6 +14,8 @@ spring:
           predicates:  # 断言，表达式
             - Path=/query/**  # 路径以query开头的url
             - After=2011-01-20T17:42:47.789-07:00[America/Denver]  # 参考 官网的路由断言工厂！
+          filters:
+            - AddRequestHeader=javaye, bigdata
 #        - id: register-server
 #          uri: lb://register-server
 #          predicates:
