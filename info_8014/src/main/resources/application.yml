@@ -2,8 +2,8 @@ server:
   port: 8014
 
 spring:
-  application:
-    name: info-server
+#  application:
+#    name: info-server
 
   datasource:
     password: thinker@
@@ -11,9 +11,9 @@ spring:
     url: jdbc:mysql://localhost:3306/micro_service
     driver-class-name: com.mysql.jdbc.Driver
 
-  cloud:
-    nacos:
-      server-addr: only:8848
+#  cloud:
+#    nacos:
+#      server-addr: only:8848
 #      discovery:
 #        cluster-name: gz
 #        namespace: 849871a2-611e-4d4c-b573-0bdfd779c021
@@ -33,3 +33,6 @@ mybatis-plus:
 register-server:
   ribbon:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  # 配置新的负载均衡规则
+
+a:
+  b: a_b_local

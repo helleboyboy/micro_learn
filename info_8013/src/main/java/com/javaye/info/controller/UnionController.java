@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -22,7 +23,8 @@ public class UnionController {
     UnionService unionService;
 
     @GetMapping("/query/unionAll")
-    public List<UnionInfoAndRegister> selectAll(){
+    public List<UnionInfoAndRegister> selectAll(@RequestHeader(value = "javaye", required = false, defaultValue = "默认值") String javaye){
+        System.out.println("javaye:" + javaye);
         return unionService.selectAll();
     }
 
